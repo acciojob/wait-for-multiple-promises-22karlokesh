@@ -3,15 +3,18 @@
 
 // unknown
 // Reference to the output tbody
+// Reference to the output tbody
 const output = document.getElementById("output");
 
 // Initially show "Loading..." row
 const loadingRow = document.createElement("tr");
+loadingRow.setAttribute("id", "loading"); // Add this line
 const loadingCell = document.createElement("td");
 loadingCell.setAttribute("colspan", "2");
 loadingCell.textContent = "Loading...";
 loadingRow.appendChild(loadingCell);
 output.appendChild(loadingRow);
+
 
 // Function to create a promise that resolves after random delay (1 to 3 seconds)
 function createTimedPromise(index) {
